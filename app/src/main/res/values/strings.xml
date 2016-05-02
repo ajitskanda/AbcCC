@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">The home of ABC cricket club</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_login">Login</string>
+    <string name="username">Username</string>
+    <string name="passwd">Password</string>
+    <string name="title">Welcome to ABC Cricket Club</string>
+    <string name="login_page_display_message">Login Page</string>
+</resources>
