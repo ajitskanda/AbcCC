@@ -2,6 +2,7 @@ package android.abc.nl.abccc.activity;
 
 import android.abc.nl.abccc.R;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -36,13 +37,41 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*@Override
+    public void onRestoreInstanceState() {
+        super.onRestoreInstanceState();
+    }*/
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        getContentResolver().update(Uri.EMPTY, null, null, null);
+
+        super.onStop();
+    }
+
     @Override
     public void onResume() {
         super.onResume();
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //in case of an app restore rather than a fresh start
+        if(savedInstanceState != null) {
+
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -65,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    //@Override
+    public void onSaveInstanceState() {
+
     }
 
     @Override
