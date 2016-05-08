@@ -3,6 +3,7 @@ package android.abc.nl.abccc.fragments;
 import android.abc.nl.abccc.R;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,8 @@ public class ArticleFragment extends Fragment {
         }
 
         // Inflate the layout for this fragment
+        //View articleFragment = R.layout.article_fragment
+
         return inflater.inflate(R.layout.article_view, container, false);
     }
 
@@ -51,7 +54,7 @@ public class ArticleFragment extends Fragment {
 
     public void updateArticleView(int position) {
         TextView article = (TextView) getActivity().findViewById(R.id.article);
-        article.setText(HeadlinesFragment.Articles[position]);
+        article.setText(StaticData.Articles[position]);
         mCurrentPosition = position;
     }
 

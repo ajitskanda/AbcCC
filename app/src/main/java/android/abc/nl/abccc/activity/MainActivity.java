@@ -75,15 +75,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*TextView textView = new TextView(this);
-        textView.setTextSize(30);
-        textView.setText("Login page");
-
-        View view  = findViewById(R.id.content);
-        ArrayList<View> views = new ArrayList<View>();
-        views.add(textView);
-        view.addTouchables(views);*/
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

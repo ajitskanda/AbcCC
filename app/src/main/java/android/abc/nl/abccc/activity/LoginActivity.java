@@ -2,10 +2,12 @@ package android.abc.nl.abccc.activity;
 
 import android.abc.nl.abccc.R;
 import android.abc.nl.abccc.fragments.HeadlinesFragment;
+import android.abc.nl.abccc.fragments.StaticData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -42,6 +44,16 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
     @Override
     public void onArticleSelected(int position) {
 
+        String message;
+        if (position <= StaticData.Articles.length-1) {
+            message = StaticData.Articles[position];
+        } else {
+            message = "No article found!";
+        }
+
+        //View articleFragView = findViewById(R.layout.article_view);
+
+        setContentView(R.layout.article_view);
     }
 
 }
