@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onStop() {
-        getContentResolver().update(Uri.EMPTY, null, null, null);
-
         super.onStop();
     }
 
@@ -69,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         //in case of an app restore rather than a fresh start
         if(savedInstanceState != null) {
-
+            //TODO
         }
 
         super.onCreate(savedInstanceState);

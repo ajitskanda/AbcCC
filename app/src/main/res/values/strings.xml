@@ -6,5 +6,6 @@
     <string name="username">Username</string>
     <string name="passwd">Password</string>
     <string name="title">Welcome to ABC Cricket Club</string>
+    <string name="welcome_user">Welcome Ajit Skanda</string>
     <string name="login_page_display_message">Login Page</string>
 </resources>
