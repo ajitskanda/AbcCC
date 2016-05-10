@@ -43,16 +43,6 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
 
     @Override
     public void onArticleSelected(int position) {
-
-        String message;
-        if (position <= StaticData.Articles.length-1) {
-            message = StaticData.Articles[position];
-        } else {
-            message = "No article found!";
-        }
-
-        //View articleFragView = findViewById(R.layout.article_view);
-
         setContentView(R.layout.article_view);
     }
 

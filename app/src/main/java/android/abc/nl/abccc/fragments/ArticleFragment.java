@@ -28,10 +28,17 @@ public class ArticleFragment extends Fragment {
             mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
         }
 
-        // Inflate the layout for this fragment
-        //View articleFragment = R.layout.article_fragment
+        /*String message;
+        if (mCurrentPosition <= StaticData.Articles.length-1) {
+            message = StaticData.Articles[mCurrentPosition];
+        } else {
+            message = "No article found!";
+        }
 
-        return inflater.inflate(R.layout.article_view, container, false);
+        Fragment articleFragment = getTargetFragment();*/
+
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.article_fragment, container, false);
     }
 
     @Override
