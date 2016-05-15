@@ -14,7 +14,7 @@ import android.widget.TextView;
  */
 
 public class ArticleFragment extends Fragment {
-    final static String ARG_POSITION = "position";
+    public final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
 
     @Override
@@ -60,7 +60,7 @@ public class ArticleFragment extends Fragment {
     }
 
     public void updateArticleView(int position) {
-        TextView article = (TextView) getActivity().findViewById(R.id.article);
+        TextView article = (TextView) getActivity().findViewById(R.id.article_fragment);
         article.setText(StaticData.Articles[position]);
         mCurrentPosition = position;
     }

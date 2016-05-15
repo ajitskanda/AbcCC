@@ -1,6 +1,7 @@
 package android.abc.nl.abccc.activity;
 
 import android.abc.nl.abccc.R;
+import android.abc.nl.abccc.fragments.ArticleFragment;
 import android.abc.nl.abccc.fragments.HeadlinesFragment;
 import android.abc.nl.abccc.fragments.StaticData;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -21,14 +23,30 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = getIntent();
+       /* Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         TextView textView = new TextView(this);
         textView.setTextSize(30);
-        textView.setText(message);
+        textView.setText(message);*/
 
         setContentView(R.layout.news_articles);
+
+        if (findViewById(R.id.fragment_container) != null) {
+
+            //if returning to a saved state, nothing is needed
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            HeadlinesFragment firstFragment = new HeadlinesFragment();
+
+            firstFragment.setArguments(getIntent().getExtras());
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, firstFragment)
+                    .commit();
+        }
 
     }
 
@@ -43,7 +61,25 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
 
     @Override
     public void onArticleSelected(int position) {
-        setContentView(R.layout.article_view);
+        ArticleFragment articleFragment = (ArticleFragment)
+                getSupportFragmentManager().findFragmentById(R.id.article_fragment);
+
+        if (articleFragment != null) {
+            articleFragment.updateArticleView(position);
+
+        } else {
+            ArticleFragment newFragment = new ArticleFragment();
+            Bundle args = new Bundle();
+            args.putInt(ArticleFragment.ARG_POSITION, position);
+            newFragment.setArguments(args);
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.addToBackStack(null);
+
+            transaction.commit();
+        }
+
     }
 
 }
