@@ -9,4 +9,6 @@
     <string name="footer">ABC Cricket club</string>
     <string name="login_page_display_message">Login Page</string>
     <string name="articleValue">Article Value</string>
+    <string name="fixed_footer">ABC Cricket club @copyright 2016</string>
+    <string name="fixed_header">Welcome to ABC Cricket club</string>
 </resources>
