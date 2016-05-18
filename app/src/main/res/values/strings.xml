@@ -11,4 +11,6 @@
     <string name="articleValue">Article Value</string>
     <string name="fixed_footer">ABC Cricket club @copyright 2016</string>
     <string name="fixed_header">Welcome to ABC Cricket club</string>
+    <string name="user_welcome">Welcome Ajit Skanda</string>
+    <string name="calendar_msg">Calendar for current month</string>
 </resources>
