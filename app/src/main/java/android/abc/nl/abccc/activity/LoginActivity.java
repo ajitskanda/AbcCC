@@ -16,7 +16,7 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
 
         setContentView(R.layout.news_articles);
 
-        if (findViewById(R.id.fragment_container) != null) {
+        if (findViewById(R.id.article_fragment) != null) {
 
             //if returning to a saved state, nothing is needed
             if (savedInstanceState != null) {
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
             firstFragment.setArguments(getIntent().getExtras());
 
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, firstFragment)
+                    .add(R.id.article_fragment, firstFragment)
                     .commit();
         }
 
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements HeadlinesFragmen
             newFragment.setArguments(args);
 
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.replace(R.id.article_fragment, newFragment);
             transaction.addToBackStack(null);
 
             transaction.commit();
