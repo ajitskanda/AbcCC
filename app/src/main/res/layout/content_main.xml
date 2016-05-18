@@ -15,14 +15,12 @@
     <EditText android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:hint="@string/username"
         />
 
     <EditText android:id="@+id/passwd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:inputType="textPassword"
         android:hint="@string/passwd"
         />

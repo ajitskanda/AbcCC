@@ -5,12 +5,12 @@ package android.abc.nl.abccc.fragments;
  */
 public class StaticData {
     public static String[] Headlines = {
-            "Article One",
-            "Article Two"
+            "ABC win League 2",
+            "ABC win best club of the year"
     };
 
     public static String[] Articles = {
-            "Article One\n\nExcepteur pour-over occaecat squid biodiesel umami gastropub, " +
+            "ABC win League 2: \n\nExcepteur pour-over occaecat squid biodiesel umami gastropub, " +
                     "nulla laborum salvia dreamcatcher fanny pack. Ullamco culpa retro ea, trust " +
                     "fund excepteur eiusmod direct trade banksy nisi lo-fi cray messenger bag. " +
                     "Nesciunt esse carles selvage put a bird on it gluten-free, wes anderson ut" +
@@ -20,7 +20,7 @@ public class StaticData {
                     "Esse single-origin coffee banksy do next level tempor. Velit synth " +
                     "dreamcatcher, magna shoreditch in american apparel messenger " +
                     "bag narwhal PBR ennui farm-to-table.",
-            "Article Two\n\nVinyl williamsburg non velit, master cleanse four loko banh mi. " +
+            "ABC win best club of the year: \n\nVinyl williamsburg non velit, master cleanse four loko banh mi. " +
                     "Enim kogi keytar trust fund pop-up portland gentrify. Non ea typewriter " +
                     "dolore deserunt Austin. Ad magna ethical kogi mixtape next level. Aliqua " +
                     "pork belly thundercats, ut pop-up tattooed dreamcatcher kogi accusamus photo " +
