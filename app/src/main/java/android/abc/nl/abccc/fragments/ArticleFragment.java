@@ -9,10 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by Ajit Skanda K on 08-05-2016.
- */
-
 public class ArticleFragment extends Fragment {
     public final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
@@ -60,7 +56,7 @@ public class ArticleFragment extends Fragment {
     }
 
     public void updateArticleView(int position) {
-        TextView article = (TextView) getActivity().findViewById(R.id.article_fragment);
+        TextView article = (TextView) getActivity().findViewById(R.id.txtArticle);
         article.setText(StaticData.Articles[position]);
         mCurrentPosition = position;
     }
