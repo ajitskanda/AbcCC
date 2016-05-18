@@ -9,8 +9,11 @@ import android.support.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -26,6 +29,7 @@ public class UserService extends android.app.Service {
     private MongoOperations mongoOperations;
 
     public UserService() {
+
         applicationContext = new AnnotationConfigApplicationContext(MongoConfig.class);
         mongoOperations = (MongoOperations) applicationContext.getBean("mongoTemplate");
     }
