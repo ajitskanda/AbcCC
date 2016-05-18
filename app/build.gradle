@@ -40,8 +40,15 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'org.springframework:spring-context:4.0.3.RELEASE'
     compile 'org.springframework.security:spring-security-core:4.0.3.RELEASE'
+    compile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
     compile 'org.springframework.data:spring-data-mongodb:1.9.1.RELEASE'
 
     testCompile 'junit:junit:4.12'
+}
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
 }
 
