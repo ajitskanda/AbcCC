@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/user_welcome"
-        android:id="@+id/textView2" />
+        android:layout_alignParentTop="true"
+        android:background="#FC9"
+        android:gravity="center">
 
-    <fragment android:name="android.abc.nl.abccc.fragments.HeadlinesFragment"
-        android:id="@+id/headlines_fragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/fixed_header"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
-    <include layout="@layout/calendar_view" />
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FC0"
+        android:gravity="center">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/fixed_footer"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_welcome"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <fragment
+            android:id="@+id/headlines_fragment"
+            android:name="android.abc.nl.abccc.fragments.HeadlinesFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <include layout="@layout/calendar_view" />
+    </RelativeLayout>
+</RelativeLayout>
